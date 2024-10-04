@@ -1,0 +1,48 @@
+const express = require('express');
+const app = express();
+
+// Set view engine to Jade
+app.set('view engine', 'jade');
+app.set('views', './views'); // Ensure this path is correct
+
+// Serve static files
+app.use(express.static('public')); // Adjust the path for your static files
+
+// Route for the destinations page
+app.get('/destinations', (req, res) => {
+    const destinations = [
+        {
+            name: "Paris, France",
+            image: "https://example.com/paris.jpg", // Replace with actual image URLs
+            description: "The city of lights, known for its art, fashion, and culture."
+        },
+        {
+            name: "Tokyo, Japan",
+            image: "https://example.com/tokyo.jpg", // Replace with actual image URLs
+            description: "A bustling metropolis blending tradition and innovation."
+        },
+        {
+            name: "New York City, USA",
+            image: "https://example.com/nyc.jpg", // Replace with actual image URLs
+            description: "The city that never sleeps, filled with iconic landmarks."
+        },
+        {
+            name: "Sydney, Australia",
+            image: "https://example.com/sydney.jpg", // Replace with actual image URLs
+            description: "Famous for its Sydney Opera House and stunning harbour."
+        }
+    ];
+    
+    res.render('destinations', { destinations: destinations });
+});
+
+// Handle 404 errors
+app.use((req, res) => {
+    res.status(404).send('Not Found');
+});
+
+// Start the server
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+});

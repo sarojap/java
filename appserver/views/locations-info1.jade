@@ -1,0 +1,73 @@
+extends layout
+
+block content
+  .row.page-header
+    .col-lg-12
+      h1(style="margin-top:100px") Travels and Tourism
+
+  .row
+    .col-xs-12.col-md-9
+      .panel.panel-primary
+        .panel-heading
+          h2.panel-title Featured Destinations
+        .panel-body
+          p Here are some popular destinations to explore:
+
+          .row
+            .col-xs-12.col-sm-4
+              h3 Paris
+              p A beautiful place to visit with stunning views.
+            .col-xs-12.col-sm-4
+              h3 London
+              p Experience the rich culture and history.
+            .col-xs-12.col-sm-4
+              h3 Chicago
+              p Enjoy the serene beaches and vibrant nightlife.
+
+      .panel.panel-primary
+        .panel-heading
+          h2.panel-title Travel Tips
+        .panel-body
+          p Check out our top tips for a hassle-free trip:
+          ul
+            li Pack light and smart.
+            li Always have travel insurance.
+            li Stay hydrated and take breaks.
+
+      .panel.panel-primary
+        .panel-heading
+          h2.panel-title Customer Reviews
+        .panel-body.review-container
+          .row
+            .review
+              .well.well-sm.review-header
+                span.rating
+                  span.glyphicon.glyphicon-star
+                  span.glyphicon.glyphicon-star
+                  span.glyphicon.glyphicon-star
+                  span.glyphicon.glyphicon-star
+                  span.glyphicon.glyphicon-star
+                span.reviewAuthor Alice Smith
+                small.reviewTimestamp 20 August 2024
+              .col-xs-12
+                p "This travel agency made my trip unforgettable!"
+          .row
+            .review
+              .well.well-sm.review-header
+                span.rating
+                  span.glyphicon.glyphicon-star
+                  span.glyphicon.glyphicon-star
+                  span.glyphicon.glyphicon-star-empty
+                  span.glyphicon.glyphicon-star-empty
+                  span.glyphicon.glyphicon-star-empty
+                span.reviewAuthor Bob Johnson
+                small.reviewTimestamp 15 July 2024
+              .col-xs-12
+                p "Good service but could improve on communication."
+
+    .col-xs-12.col-md-3
+      p.lead
+        | Discover amazing destinations and plan your next adventure with us. 
+      p
+        | If you've traveled with us, please leave a review to help others make informed decisions.
+      a.btn.btn-default(href='/destinations') Explore Destinations

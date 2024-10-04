@@ -1,0 +1,105 @@
+extends layout
+
+block content
+  .row.page-header
+    .col-lg-12
+      h1(style="margin-top:100px") Sunny Beach Resort
+
+  .row
+    .col-xs-12.col-md-9
+      .row
+        .col-xs-12.col-sm-6
+          p.rating
+            span.glyphicon.glyphicon-star
+            span.glyphicon.glyphicon-star
+            span.glyphicon.glyphicon-star
+            span.glyphicon.glyphicon-star
+            span.glyphicon.glyphicon-star
+          p 123 Beachside Ave, Coastal City, CC 98765
+
+      .panel.panel-primary
+        .panel-heading
+          h2.panel-title Attractions
+        .panel-body
+          ul
+            li Pristine Beaches
+            li Water Sports
+            li Beachfront Dining
+            li Sunset Cruises
+
+      .panel.panel-primary
+        .panel-heading
+          h2.panel-title Best Time to Visit
+        .panel-body
+          p The best time to visit is between June and September for sunny weather and lively beach activities.
+
+      .panel.panel-primary
+        .panel-heading
+          h2.panel-title Facilities
+        .panel-body
+          span.label.label-warning
+            span.glyphicon.glyphicon-ok
+            | &nbsp;Beach Rentals
+          | &nbsp;
+          span.label.label-warning
+            span.glyphicon.glyphicon-ok
+            | &nbsp;Restaurants
+          | &nbsp;
+          span.label.label-warning
+            span.glyphicon.glyphicon-ok
+            | &nbsp;Showers and Changing Rooms
+          | &nbsp;
+
+    .col-xs-12.col-sm-6.location-map
+      .panel.panel-primary
+        .panel-heading
+          h2.panel-title Location Map
+        .panel-body
+          iframe(
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.267320106661!2d-122.07193268468443!3d37.39312167982759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fbb2d07d9d89b%3A0x5e5a2cf3a9d5beaf!2sSunny%20Beach%20Resort!5e0!3m2!1sen!2sus!4v1690527278364!5m2!1sen!2sus",
+            width="350",
+            height="350",
+            style="border:0;",
+            allowfullscreen="",
+            loading="lazy"
+          )
+
+  .row
+    .col-xs-12
+      .panel.panel-primary.review-panel
+        .panel-heading
+          a.btn.btn-default.pull-right(href='/location/review/new') Add Review
+          h2.panel-title Customer Reviews
+        .panel-body.review-container
+          .row
+            .review
+              .well.well-sm.review-header
+                span.rating
+                  span.glyphicon.glyphicon-star
+                  span.glyphicon.glyphicon-star
+                  span.glyphicon.glyphicon-star
+                  span.glyphicon.glyphicon-star
+                  span.glyphicon.glyphicon-star
+                span.reviewAuthor Sarah Lee
+                small.reviewTimestamp 15 August 2024
+              .col-xs-12
+                p "A perfect getaway! The beaches are stunning and the food is excellent."
+          .row
+            .review
+              .well.well-sm.review-header
+                span.rating
+                  span.glyphicon.glyphicon-star
+                  span.glyphicon.glyphicon-star
+                  span.glyphicon.glyphicon-star-empty
+                  span.glyphicon.glyphicon-star-empty
+                  span.glyphicon.glyphicon-star-empty
+                span.reviewAuthor John Smith
+                small.reviewTimestamp 5 July 2024
+              .col-xs-12
+                p "Nice place, but it gets crowded during peak season."
+
+    .col-xs-12.col-md-3
+      p.lead
+        | Enjoy a relaxing beach vacation filled with sun, sand, and sea activities. 
+      p
+        | If you've visited Sunny Beach Resort, please share your experience by leaving a review!
